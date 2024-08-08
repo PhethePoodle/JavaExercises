@@ -1,0 +1,77 @@
+/*/***************************************************************
+* Programmer: Pheobe Hill
+* BroncoNetID: Pzs0022
+* Exercise 02: Special Note
+* CIS 2600: Business Application Programming spring 2023
+*
+* Due date: 09/22/2023
+* Date completed: 09/19/2023
+****************************************************************
+The purpose of this program is to calcualte a users bmi.
+
+1. Decalre data types and varaibles.
+2. Display questions to the user by using command lines.
+3. Collect user information by using a scanner class and next() method. 
+4. Calculate the users body mass index and Assign to a variable as the total.
+5. Cisplay the user name age and bmi total.
+***************************************************************/
+
+
+//name of assignment/file
+package exercise2hillpheobe;
+///Import scanner to get user input
+import java.util.Scanner;
+///public class created for exercise 2 contains all code for assignment
+public class Exercise2HillPheobe {  
+    
+    
+  
+    ///create the main class start here!
+    public static void main(String[] args) {
+       
+    //Declare variables and data types//
+        String name;      // Name
+        int age;          // Age
+        double weight;    // weight pounds (lbs)
+        double height;    // height inches  (in)
+        double bmi;       // Total bmi weight
+        
+    //create a scanner class (UserInfo) to obtain int,double,strings //
+    Scanner UserInfo = new Scanner(System.in);
+           
+       //print lines to seperate data
+        System.out.print("================================\n");
+       
+        //Assign method next()(datatype) to variables to get user inputs
+        // use nextInt() for integer and next() for string and nextdouble() for calculations
+        //Get user name 
+        System.out.print("Please enter your name:");
+        name = UserInfo.next(); 
+        
+        //Get user age 
+        System.out.print("Please enter your age:");
+        age = UserInfo.nextInt();
+        
+        //Get user weight(lbs)  
+        System.out.print("Please enert your weight (lbs):");
+        weight = UserInfo.nextDouble();
+        
+        //Get user height(in) 
+        System.out.print("Please enter your height (in):");
+        height = UserInfo.nextDouble();
+        
+        //print lines to seperate data and have a nice display
+        System.out.print("=================================\n");
+       
+        
+        
+        //calculate bmi (weight / height^2) * 703 and Assign to variable bmi
+        bmi = weight / (height * height) * 703;
+        
+        //print Results including name, age, and bmi total on different lines
+        System.out.print( "Results>>>\n" + name + "," + age +
+         " years old\nBMI:" + bmi);       
+        
+     }
+        }
+    
