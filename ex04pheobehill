@@ -1,0 +1,82 @@
+/***************************************************************
+* Programmer: Pheobe Hill
+* BroncoNetID: Pzs0022
+* Exercise 04: Introduction
+* CIS 2600: Business Application Programming spring 2023
+*
+* Due date: 10/13/2023
+* Date completed: 10/10/2023
+****************************************************************
+* The purpose of this program is to get the user sales for that week.
+* And then display the total sales for the week and if they qualify
+* for a commission.
+***************************************************************/
+package ex04pheobehill;
+
+//import java scanner
+import java.util.Scanner;
+
+
+public class Ex04PheobeHill 
+{
+    public static void main(String[] args) 
+    {     //get user input
+        Scanner scan = new Scanner(System.in);
+       
+        ///display info to user
+        System.out.println("With weekly sales between $3000 and $4999.99\n" +
+                "you receive 10% comission. With Sales of $5000 \n or more you"+
+                "receive 20% comission. \n We will calculate your comission for this week");
+        System.out.println("===============================================");
+        //get user sales amt
+        System.out.println("How much sales did you do this week: ");
+        
+         
+        //set user input equal to salesamount (double for value purposes)
+        double amount = scan.nextDouble();
+        //commission is the percentage increase
+        double  commissionPercentage = 0.0;
+       
+
+         //if sales amount is 500 or greater than
+         if(amount >= 5000){
+             
+            commissionPercentage = 20; //20 % increase 
+             
+             //Display
+             System.out.println("===============================================");
+             System.out.println("Congrats! You qualify for a 20% comission this week!");
+        
+        
+         }
+         //if sales amount is 3000 or greater than
+         else if(amount >=3000){
+             
+             commissionPercentage = 10; //10% increase 
+             
+             //display
+             System.out.println("===============================================");
+             System.out.println("Congrats!"+"You qualify for a 10% comission this week!");
+     
+         }
+         //if sales is 3000 or less 
+         else {
+             //display
+             System.out.println("===============================================");
+             System.out.println("You do not qualify for comission this week,\n" + "try again next week!");
+         }
+         
+         //caculate equations
+         double commission = (amount * commissionPercentage)/100;
+        
+         double totalAmount = (amount + commission); 
+        
+         //print results
+         System.out.println("Total Sales: " + commission);
+      
+       
+    
+        
+    }//main class
+    
+}//public class
