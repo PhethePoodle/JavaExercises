@@ -1,0 +1,39 @@
+/*/***************************************************************
+* Programmer: Pheobe Hill
+* BroncoNetID: Pzs0022
+* Exercise 03: Special Note
+* CIS 2600: Business Application Programming fall 2023
+*
+* Due date: 10/09/2023
+* Date completed: 10/05/22
+****************************************************************
+The purpose of this program is to calcualte a users bmi.
+
+1. Create a Student object (Student.java) class that requires: 
+Year in school (integer [i.e., 1,2, 3, 4, 5, etc.])
+Major (String [i.e., CIS, TIM, etc.)
+GPA (double [i.e., 2.5, etc.])
+2.Overload the constructor to allow for other objects to be created if:
+Only Year and Major were specified (0.0 as the default value for GPA)
+
+***************************************************************/
+package exercise3pheohhill;
+
+public class Main {
+
+    public static void main(String[] args) {
+        
+        //crteate objects 
+       Student mike = new Student();
+        Student calvin = new Student(5);
+        Student Phe = new Student(1,"cis");
+        Student Jojo = new Student (3,"bus",2.5);
+       
+        //print student records by calling methods from class Student
+        System.out.println("Student 1 is in year "+ mike.getyear());
+            System.out.println("Student 2 is in year "+ calvin.getyear());
+         System.out.println("Student 3 major is "+ Phe.getmajor());
+         System.out.println("Student 4 gpa, year, and major is: " + Jojo.getgpa()+ ", "+ Jojo.getyear()+", "+  Jojo.getmajor());
+        
+    }
+    
