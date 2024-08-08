@@ -1,0 +1,52 @@
+/***************************************************************
+* Programmer: Pheobe Hill
+* BroncoNetID: Pzs0022
+* Exercise 01: Special Note
+* CIS 2600: Business Application Programming spring 2023
+*
+* Due date: 01/20/2023
+* Date completed: 01/18/2023
+****************************************************************
+* Program Explanation
+* Here you provide a detailed explanation of the program.
+* Explain its purpose, what it does, and how it does it.
+***************************************************************/
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
+
+package exercise1hillpheobe;
+
+/**
+ *
+ * @author pheobe
+ */
+
+//import the JOption package 
+import javax.swing.JOptionPane;
+
+///create first class and identifier
+public class Ex01PheobeH {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+// Print the following statements Hellow WMU!, PHEOBE HILL, 
+//Welcomes you to java
+        System.out.println("Hello WMU!");
+        System.out.println("Pheobe Hill"); 
+        System.out.println("Welcomes you to java");
+        
+        ///Use JOptionpane package .showmessageDialog function to display statements This is my first dialog. 
+        //Welcome to java with two lines
+        JOptionPane.showMessageDialog(null,"This is my first dialog." + "\nWelcomes you to Java.");
+        
+        //close bracket of public static void
+      }
+    //close bracket of public class
+}
