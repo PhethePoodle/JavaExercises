@@ -1,0 +1,85 @@
+/*/***************************************************************
+* Programmer: Pheobe Hill
+* BroncoNetID: Pzs0022
+* Exercise 03: Special Note
+* CIS 2600: Business Application Programming fall 2023
+*
+* Due date: 10/09/2023
+* Date completed: 10/05/22
+****************************************************************
+The purpose of this program is to calcualte a users bmi.
+
+1. Create a Student object (Student.java) class that requires: 
+Year in school (integer [i.e., 1,2, 3, 4, 5, etc.])
+Major (String [i.e., CIS, TIM, etc.)
+GPA (double [i.e., 2.5, etc.])
+2.Overload the constructor to allow for other objects to be created if:
+Only Year and Major were specified (0.0 as the default value for GPA)
+
+***************************************************************/
+package exercise3pheohhill;
+
+   //class type public for accessibility to the main
+public class Student {
+    
+       //instance variables..attributes of the class
+         private int year;
+         private double gpa;
+         private String major;
+
+         ///get set year
+         public int getyear(){
+             return year;
+         }
+         
+         public void setyear(int y){
+             year = y;
+         }
+         
+         //get set gpa
+         public double getgpa(){
+             return gpa;
+         }
+         
+         public void setgpa(double g){
+             gpa = g;
+         }
+         
+         //get set major
+         public String getmajor(){
+             
+             return major;
+         }
+         
+         public void setmajor(String m){
+             major = m;
+         }
+         
+         
+         //overload instructor
+         public Student(){
+             year = 0;
+             major = "UND";
+             gpa =0.0;
+         }
+         public Student(int y){
+             year = y;
+             major = "UND";
+             gpa =0.0;
+         }
+         
+         public Student(int y,String m){
+             year = y;
+             major = m;
+             gpa =0.0;
+         }
+        public Student(int y, String m, double g){
+             year = y;
+             major = m;
+             gpa =g;
+         }
+   
+   
+
+    
+    }
