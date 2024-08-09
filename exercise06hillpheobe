@@ -1,0 +1,44 @@
+/***************************************************************
+* Programmer: Pheobe Hill
+* BroncoNetID: Pzs0022
+* Exercise 05: Arrays
+* CIS 2600: Business Application Programming spring 2023
+*
+* Due date: 11/10/2023
+* Date completed: 11/08/2023
+****************************************************************
+* The purpose of this program is to create an array that holds 15 string
+* values. Display the array first to last using an enhanced for loop
+* ,As well as last to first using a for loop.
+***************************************************************/
+
+package exercise06hillpheobe;
+
+public class Exercise06HillPheobe {
+
+    public static void main(String[] args) {
+        // Define the array with 15 string values (no duplicates)
+        String[] elements = {"Apple", "Banana", "Cherry", "Date", "Grape", "Fig", "Kiwi", "Lemon", "Mango", "Orange",
+            "Peach", "Pear", "Plum", "Strawberry", "Watermelon"};
+
+        // Display the array from first to last element using an enhanced for loop (foreach loop)
+        System.out.println("Strings from first to last element:");
+
+        // Enhanced for loop to iterate through the array
+        for (String str : elements) {
+            System.out.println(str);  // Print each element
+        }
+
+        // Display the array from last to first element using a normal for loop
+        System.out.println("\nStrings from last to first element:");
+
+        // Normal for loop to iterate through the array in reverse order
+        for (int i = elements.length - 1; i >= 0; i--) {
+            System.out.println(elements[i]);  // Print each element in reverse order
+        }
+    }
+}
+
+        
+     
+    
