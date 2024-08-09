@@ -1,0 +1,58 @@
+/***************************************************************
+* Programmer: Pheobe Hill
+* BroncoNetID: Pzs0022
+* Exercise 07
+* CIS 2600: Business Application Programming spring 2023
+*
+* Due date: 11//2023
+* Date completed: 11/29/2023
+****************************************************************
+* The purpose of this program is to get the first integer (numerator)
+Get the second integer (denominator)
+Divide (one/two) and shows the integer result (there will be data loss in some cases)
+Catch a zero division error and show a message (Arithmetic Exception)
+Catch a non number entry and show a message (Number Format Exception)
+Catch any other errors
+
+***************************************************************/
+package exercise07hillpheobe;
+//plugin for joptionpane
+import javax.swing.JOptionPane;
+
+public class Exercise07HillPheobe extends javax.swing.JFrame{
+
+///main class
+    public static void main(String[] args) {
+      
+        //Try to get user input and catch any exceptions
+       try{
+           //user first number and second number is set to data type to intiger
+        String userInput = JOptionPane.showInputDialog("Enter your first number:");
+          int num1 = Integer.parseInt(userInput);
+        
+        String userInput2 = JOptionPane.showInputDialog("Enter your second number:");
+          
+            int num2 = Integer.parseInt(userInput2);
+            
+    
+        //calculate the results 
+            int result = num1 / num2;
+
+          //display the results
+            JOptionPane.showMessageDialog(null,"Result: "+ result);
+           
+        
+       }catch (ArithmeticException e) {
+            // Catch the ArithmeticException and display an error message
+            JOptionPane.showMessageDialog(null, "Error!!! " + e.getMessage(),
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        catch (NumberFormatException e) {
+            // Catch the NumberFormatException and display an error message
+            JOptionPane.showMessageDialog(null, "Error!! " + e.getMessage(),
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }                
+    }
+    
+
