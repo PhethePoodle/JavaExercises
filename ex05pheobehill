@@ -1,0 +1,47 @@
+/***************************************************************
+* Programmer: Pheobe Hill
+* BroncoNetID: Pzs0022
+* Exercise 05: Random number generator
+* CIS 2600: Business Application Programming spring 2023
+*
+* Due date: 10/24/2023
+* Date completed: 10/27/2023
+****************************************************************
+* The purpose of this program is to get a random number from the user,
+* and notify if their number is correct if no continue and let the user 
+* guess again. This program includes while loops.
+***************************************************************/
+package ex05pheobehill;
+
+//import java scanner to print
+import java.util.Scanner;
+//random number generator 
+import java.util.Random;
+//class created for exercise 5
+public class Ex05PheobeHill {
+
+   
+    public static void main(String[] args) {
+
+       Scanner sc = new Scanner(System.in);//get user info 
+       int number; //variable created within scope 
+      
+       Random num = new Random();//generates random num
+       int realnum = num.nextInt(5)+1;//sets random number 1-5 and equal to varibale "realnum"
+        
+           
+       System.out.println("Enter a number from 1 through 5:"); // end-user type in any integer 
+       number = sc.nextInt(); //sets user number equal to number
+        
+       while(number!=realnum){ // while loop if user guess is incorrect keep attempting till correct
+            
+           System.out.println("Your number " + number+ " is incorrect."); //end-user input
+       
+           System.out.print("Try again, Enter a number from 1-5:"); // while loop continues loop for end user to try again 
+           number = sc.nextInt();//sets user number equal to number
+        }
+           System.out.println("You entered " + number); 
+           System.out.println("Congrats! You entered the correct number,Thank you for participating"); // print function for end-user to to end loop 
+    }
+    
+}
