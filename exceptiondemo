@@ -1,0 +1,88 @@
+/***************************************************************
+* Programmer: Pheobe Hill
+* BroncoNetID: Pzs0022
+* CIS 2600: Exercise 07 (Exception Demo)
+*
+* Due date: 04/07/2023
+* Date completed: 04/02/2023
+* 
+* Exception demo is created to get the numerator and denominator from the user and compute 
+* the results while also creating parameters including catching zero division error and also
+* making sure an number format error is set in place as well as catching any other errors.
+**************************** */
+package exceptiondemo;
+//import toolkit
+import javax.swing.*;
+
+//public class "Exception Demo"
+public class ExceptionDemo {
+
+//main class 
+    public static void main(String[] args) {
+         
+        //try block created to attempt to calculate total while also catching exceptions like zero, and digits formating
+       try 
+       {
+                   
+        //integer variables created for denominator, numorator, and string inputstring.
+        int num;
+        int den;
+        String inputString;
+        
+                ///DISPLAY
+                JOptionPane.showMessageDialog (null, """
+                               ====================================
+                               Division Wiz Calculator
+                               ====================================
+                                Welcome!
+                                
+                               The Division Wiz Calculator is here to solve 
+                               any and all basic math division needs! """);
+                
+                //NUMERATOR
+                inputString = JOptionPane.showInputDialog(null,"Enter your first number"); 
+                //set num variable equal to user input integer variable
+                 num = Integer.parseInt(inputString);
+                
+                //DENOMINATOR
+                inputString = JOptionPane.showInputDialog(null,"Enter your second number");
+                //sett demoninator value equal to user input integer variable
+                 den = Integer.parseInt(inputString);
+                
+               
+                ///CALCULATIONS 
+                double result = (double) num / (double) den;
+                
+                 ///RESULTS
+                 JOptionPane.showMessageDialog(null,num + " / " + den + "\nResult is " + result);
+      
+
+       }
+       
+        //ARITHMETIC EXCEPTION HANDLE
+        catch(ArithmeticException exception)
+        {
+            
+            //print error message 
+             JOptionPane.showMessageDialog(null,"cannot / by zero");  
+        }
+       
+        ///NUMBER FORMAT EXCEPTION HANDLE
+       catch(NumberFormatException e)
+       {
+           
+          //print error message
+           JOptionPane.showMessageDialog(null, "This application accepts digits only!");
+           
+       }
+       
+       ///EXCEPTION HANDLE
+       catch(Exception ex)
+       {
+           ///print error message 
+           JOptionPane.showMessageDialog(null, "An error occured!");
+           
+       }    
+    }
+ }
+    
